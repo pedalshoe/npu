@@ -5,11 +5,13 @@ __pycache__/
 
 # Simulation outputs
 *.vcd
+*.fst
 *.log
 a.out
 *.vvp
 sim_build/
 results.xml
+test/output/
 
 # macOS specific ignores
 .DS_Store
