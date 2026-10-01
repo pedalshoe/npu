@@ -11,8 +11,21 @@ module tb;
     wire [7:0] uo_out;
     wire [7:0] uio_out;
     wire [7:0] uio_oe;
+`ifdef GL_TEST
+    wire VPWR = 1'b1;
+    wire VGND = 1'b0;
+`endif
+
+    initial begin
+        $dumpfile("tb.fst");
+        $dumpvars(0, tb);
+    end
 
     tt_um_custom_npu user_project (
+`ifdef GL_TEST
+        .VPWR    (VPWR),
+        .VGND    (VGND),
+`endif
         .clk     (clk),
         .rst_n   (rst_n),
         .ena     (ena),

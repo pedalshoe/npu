@@ -6,12 +6,17 @@ __pycache__/
 # Simulation outputs
 *.vcd
 *.fst
+*.fst.hier
 *.log
 a.out
 *.vvp
 sim_build/
 results.xml
 test/output/
+test/gate_level_netlist.v
 
 # macOS specific ignores
 .DS_Store
+
+# Editor swap files
+*.swp

@@ -6,9 +6,9 @@ from cocotb.triggers import Timer
 
 async def tick(dut):
     dut.clk.value = 0
-    await Timer(5, unit="ns")
+    await Timer(50, unit="ns")
     dut.clk.value = 1
-    await Timer(5, unit="ns")
+    await Timer(50, unit="ns")
 
 
 async def reset(dut):

@@ -23,6 +23,7 @@ module tt_um_custom_npu (
     // --------------------------------------------------------------------
     reg [2:0] current_state;
     reg signed [7:0] reg_a, reg_b;
+    reg signed [15:0] data_out_reg;
     wire signed [15:0] pe_accum;
     reg pe_en;
 
@@ -49,7 +50,6 @@ module tt_um_custom_npu (
         end
     end
 
-    reg signed [15:0] data_out_reg;
     assign data_out = data_out_reg;
 
     // Signed multiplier
@@ -66,4 +66,3 @@ module tt_um_custom_npu (
 
 
 endmodule
-
