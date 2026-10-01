@@ -1,0 +1,15 @@
+# Tiny Tapeout & OpenLane ignores
+runs/
+__pycache__/
+.pytest_cache/
+
+# Simulation outputs
+*.vcd
+*.log
+a.out
+*.vvp
+sim_build/
+results.xml
+
+# macOS specific ignores
+.DS_Store
