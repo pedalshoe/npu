@@ -1,1 +1,41 @@
-top_module: tt_um_custom_npu
+# Tiny Tapeout Project Information Configuration File
+yaml_version: 4
+
+project:
+  title:        "Custom Command NPU with ReLU"
+  description:  "Command-driven signed AI matrix math execution core with activation filtering."
+  author:       "Christopher"
+  language:     "Verilog"
+  clock_hz:     10000000
+
+  # Tell the builder exactly where your architecture lives
+  top_module:   "tt_um_custom_npu"
+
+# Assign pin descriptions for the automated layout visualizer documentation
+pinout:
+  ui[0]: "data_in[0]"
+  ui[1]: "data_in[1]"
+  ui[2]: "data_in[2]"
+  ui[3]: "data_in[3]"
+  ui[4]: "data_in[4]"
+  ui[5]: "data_in[5]"
+  ui[6]: "data_in[6]"
+  ui[7]: "data_in[7]"
+  
+  uo[0]: "data_out_lower[0]"
+  uo[1]: "data_out_lower[1]"
+  uo[2]: "data_out_lower[2]"
+  uo[3]: "data_out_lower[3]"
+  uo[4]: "data_out_lower[4]"
+  uo[5]: "data_out_lower[5]"
+  uo[6]: "data_out_lower[6]"
+  uo[7]: "data_out_lower[7]"
+  
+  uio[0]: "cmd_valid"
+  uio[1]: "data_out_upper[0]"
+  uio[2]: "data_out_upper[1]"
+  uio[3]: "data_out_upper[2]"
+  uio[4]: "data_out_upper[3]"
+  uio[5]: "data_out_upper[4]"
+  uio[6]: "data_out_upper[5]"
+  uio[7]: "data_out_upper[6]"
