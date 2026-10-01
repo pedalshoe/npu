@@ -1,4 +1,4 @@
-# Tiny Tapeout Project Information Configuration File (Version 6)
+# Tiny Tapeout Project Information Configuration File (Version 6 Explicit)
 yaml_version: 6
 
 project:
@@ -8,14 +8,36 @@ project:
   language:     "Verilog"
   clock_hz:     10000000
 
-  # New explicit parameters demanded by version 6
   tiles:        "1x1"
   source_files:
     - "project.v"
   top_module:   "tt_um_custom_npu"
 
-# Assign pin descriptions for the automated layout visualizer documentation
+# Explicit mapping required by the modern documentation parser
 pinout:
-  ui: ["data_in[0]", "data_in[1]", "data_in[2]", "data_in[3]", "data_in[4]", "data_in[5]", "data_in[6]", "data_in[7]"]
-  uo: ["data_out_lower[0]", "data_out_lower[1]", "data_out_lower[2]", "data_out_lower[3]", "data_out_lower[4]", "data_out_lower[5]", "data_out_lower[6]", "data_out_lower[7]"]
-  uio: ["cmd_valid", "data_out_upper[0]", "data_out_upper[1]", "data_out_upper[2]", "data_out_upper[3]", "data_out_upper[4]", "data_out_upper[5]", "data_out_upper[6]"]
+  ui[0]: "data_in[0]"
+  ui[1]: "data_in[1]"
+  ui[2]: "data_in[2]"
+  ui[3]: "data_in[3]"
+  ui[4]: "data_in[4]"
+  ui[5]: "data_in[5]"
+  ui[6]: "data_in[6]"
+  ui[7]: "data_in[7]"
+  
+  uo[0]: "data_out_lower[0]"
+  uo[1]: "data_out_lower[1]"
+  uo[2]: "data_out_lower[2]"
+  uo[3]: "data_out_lower[3]"
+  uo[4]: "data_out_lower[4]"
+  uo[5]: "data_out_lower[5]"
+  uo[6]: "data_out_lower[6]"
+  uo[7]: "data_out_lower[7]"
+  
+  uio[0]: "cmd_valid"
+  uio[1]: "data_out_upper[0]"
+  uio[2]: "data_out_upper[1]"
+  uio[3]: "data_out_upper[2]"
+  uio[4]: "data_out_upper[3]"
+  uio[5]: "data_out_upper[4]"
+  uio[6]: "data_out_upper[5]"
+  uio[7]: "data_out_upper[6]"
